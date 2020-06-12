@@ -1,0 +1,23 @@
+<div class="logo">
+  <a href="/">
+    <img src="https://pcm.groupclaes.be/v3/content/gro/website/logo" height="120" alt="groupclaes logo" class="logo">
+  </a>
+</div>
+<div class="login">
+  <form [formGroup]="loginForm" (submit)="login()">
+    <h1>Login</h1>
+    <div class="input-field">
+      <label for="username" translate="pages.login.form.username"></label>
+      <input autocomplete="username" formControlName="username" id="username" type="text" required>
+    </div>
+    <div class="input-field">
+      <label for="username" translate="pages.login.form.password"></label>
+      <input autocomplete="current-password" formControlName="password" type="password" required>
+    </div>
+    <div class="input-field">
+      <button id="login-button" type="submit" [disabled]="loginForm.invalid">
+        <span translate="pages.login.form.button"></span>
+      </button>
+    </div>
+  </form>
+</div>
