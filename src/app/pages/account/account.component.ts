@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/auth/auth.service';
 
@@ -11,7 +11,8 @@ export class AccountComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private ref: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -22,7 +23,8 @@ export class AccountComponent implements OnInit {
         // ok
       }, err => {
         if (err) {
-          this.router.navigate(['/']);
+          this.router.navigate(['/login']);
+          this.ref.markForCheck();
         }
       });
     }
@@ -30,7 +32,8 @@ export class AccountComponent implements OnInit {
 
   logout() {
     this.auth.logout().subscribe(() => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
+      this.ref.markForCheck();
     });
   }
 }

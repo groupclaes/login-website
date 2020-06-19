@@ -1,7 +1,7 @@
 {
   "pages": {
     "login": {
-      "title": "",
+      "title": "Login",
       "form": {
         "username": "Gebruiker",
         "password": "Password",

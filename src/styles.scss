@@ -93,7 +93,7 @@ span.text-capitalize {
 }
 
 .gro-color {
-  color: #49545C;
+  color: #5d676f;
 }
 
 div.input-field label {
@@ -126,7 +126,7 @@ div.input-field input {
   &:hover,
   &:active,
   &:focus {
-    border-color: #283480;
+    border-color: #5d676f;
   }
 }
 
@@ -153,17 +153,43 @@ button,
   }
 
   &[color="primary"] {
-    border-color: #283480;
-    background-color: #2196f3;
+    border-color: #5d676f;
+    background-color: #a1a2a9;
     color: white;
 
     &:hover {
-      background-color: #283480;
+      background-color: #5d6770;
+    }
+  }
+
+  &[color="light"] {
+    border-color: #364F63;
+    background-color: #94A3B0;
+    color: white;
+
+    &:hover {
+      background-color: #364F63;
+    }
+  }
+
+  &[color="accent"] {
+    border-color: #7DB8E8;
+    background-color: #BFD3E3;
+    color: white;
+
+    &:hover {
+      background-color: #7DB8E8;
     }
   }
 
   &[color="warn"] {
-    background-color: #E74C3C;
+    border-color: #a82f2f;
+    background-color: #f44336;
+    color: white;
+
+    &:hover {
+      background-color: #a82f2f;
+    }
   }
 
   &[disabled] {

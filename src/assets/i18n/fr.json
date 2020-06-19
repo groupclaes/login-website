@@ -1,0 +1,12 @@
+{
+  "pages": {
+    "login": {
+      "title": "Se connecter",
+      "form": {
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "button": "Connecter"
+      }
+    }
+  }
+}
