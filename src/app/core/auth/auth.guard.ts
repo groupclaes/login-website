@@ -7,10 +7,11 @@ import { AuthService } from './auth.service';
 })
 export class AuthGuard implements CanActivate {
   constructor(private auth: AuthService) {
-    this.auth.verify();
+    // this.auth.verify();
   }
 
-  canActivate(): boolean {
+  async canActivate(): Promise<boolean> {
+    await this.auth.verify().toPromise();
     return this.auth.isAuthenticated();
   }
 }

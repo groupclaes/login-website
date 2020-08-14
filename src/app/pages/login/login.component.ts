@@ -51,10 +51,14 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.auth.login(this.loginForm.value).subscribe(() => {
-      if (this.params.src) {
+      if (this.params && this.params.src) {
         switch (this.params.src) {
           case 'manage':
             window.location.href = 'https://emp.groupclaes.be/' + this.params.ui;
+            return;
+
+          case 'pcm-ui':
+            window.location.href = 'https://pcm-ui.groupclaes.be/' + this.params.ui;
             return;
 
           default:

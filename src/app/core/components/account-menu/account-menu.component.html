@@ -1,0 +1,37 @@
+<div class="company-logo">
+  <img src="https://pcm.groupclaes.be/v3/content/gro/website/logo" alt="GroupClaes Logo" width="120">
+</div>
+<nav>
+  <ul class="nav-nemu">
+    <li>
+      <a [routerLink]="['/account']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <i class="fal fa-fw fa-user"></i>&nbsp;
+        <span translate="components.account-menu.menu.account"></span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/account/apps']" routerLinkActive="active">
+        <i class="fal fa-fw fa-browser"></i>&nbsp;
+        <span translate="components.account-menu.menu.apps"></span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/account/settings']" routerLinkActive="active">
+        <i class="fal fa-fw fa-cog"></i>&nbsp;
+        <span translate="components.account-menu.menu.settings"></span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/account/profile']" routerLinkActive="active">
+        <i class="fal fa-fw fa-user-edit"></i>&nbsp;
+        <span translate="components.account-menu.menu.profile"></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" (click)="$event.preventDefault();logout()">
+        <i class="fal fa-fw fa-sign-out"></i>&nbsp;
+        <span translate="components.account-menu.menu.logout"></span>
+      </a>
+    </li>
+  </ul>
+</nav>

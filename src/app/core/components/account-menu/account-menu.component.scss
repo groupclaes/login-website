@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  height: 100vh;
+  position: relative;
+  border-right: 1px solid #999;
+  box-shadow: 0 -1px 4px 1px rgba(80, 80, 80, 0.2);
+  background-color: #EEE;
+
+  div.company-logo {
+    padding: 20px 60px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      li:first-child a {
+        border-top: 1px solid #999;
+      }
+
+      li a {
+        display: block;
+        padding: 12px 18px;
+        border-bottom: 1px solid #999;
+
+        &.active {
+          background-color: #cdcecf;
+        }
+
+        &:hover {
+          background-color: #999;
+          color: white;
+        }
+      }
+    }
+  }
+}

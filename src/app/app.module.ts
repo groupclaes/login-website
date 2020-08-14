@@ -11,6 +11,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common
 import { AuthInterceptor } from './core/auth/auth.interceptor';
 import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
+import { AccountMenuComponent } from './core/components/account-menu/account-menu.component';
+import { AccountAppsComponent } from './pages/account/apps/apps.component';
+import { AccountSettingsComponent } from './pages/account/settings/settings.component';
+import { AccountProfileComponent } from './pages/account/profile/profile.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,7 +25,11 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    AccountMenuComponent,
+    AccountAppsComponent,
+    AccountSettingsComponent,
+    AccountProfileComponent
   ],
   imports: [
     BrowserModule,

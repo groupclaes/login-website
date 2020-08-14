@@ -29,11 +29,4 @@ export class AccountComponent implements OnInit {
       });
     }
   }
-
-  logout() {
-    this.auth.logout().subscribe(() => {
-      this.router.navigate(['/login']);
-      this.ref.markForCheck();
-    });
-  }
 }

@@ -1,4 +1,15 @@
 {
+  "components": {
+    "account-menu": {
+      "menu": {
+        "account": "Account",
+        "apps": "Applicaties",
+        "settings": "Instellingen",
+        "profile": "Profiel",
+        "logout": "Uitloggen"
+      }
+    }
+  },
   "pages": {
     "login": {
       "title": "Login",
