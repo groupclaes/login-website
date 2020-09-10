@@ -15,6 +15,7 @@ import { AccountMenuComponent } from './core/components/account-menu/account-men
 import { AccountAppsComponent } from './pages/account/apps/apps.component';
 import { AccountSettingsComponent } from './pages/account/settings/settings.component';
 import { AccountProfileComponent } from './pages/account/profile/profile.component';
+import { AccountApplicationListComponent } from './core/components/account-application-list/account-application-list.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccountMenuComponent,
     AccountAppsComponent,
     AccountSettingsComponent,
-    AccountProfileComponent
+    AccountProfileComponent,
+    AccountApplicationListComponent
   ],
   imports: [
     BrowserModule,

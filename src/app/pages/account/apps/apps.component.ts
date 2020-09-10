@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
   selector: 'claes-apps',
@@ -8,9 +9,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class AccountAppsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private ref: ChangeDetectorRef,
+    private auth: AuthService
+  ) { }
 
   ngOnInit(): void {
   }
-
 }

@@ -1,0 +1,15 @@
+<h3 translate="pages.account.apps.title"></h3>
+<div class="loading" *ngIf="!applications">
+  <i class="fal fa-fw fa-lg fa-spin fa-circle-notch"></i>
+</div>
+<div class="application-list">
+  <article *ngFor="let application of applications">
+    {{ application.name }}
+    <br />
+    <a [href]="application.url" target="_blank">
+      <button>
+        <span translate="actions.start"></span>
+      </button>
+    </a>
+  </article>
+</div>

@@ -2,5 +2,29 @@
   <claes-account-menu></claes-account-menu>
   <section>
     <p>profile works!</p>
+
+    <form [formGroup]="updatePasswordForm" (submit)="updatePassword()">
+      <h3 translate="pages.account.profile.update-password-form.title"></h3>
+      <input type="hidden" autocomplete="username">
+      <div class="input-field">
+        <label for="oldPassword" translate="pages.account.profile.update-password-form.current-password"></label>
+        <input autocomplete="current-password" formControlName="oldPassword" id="oldPassword" type="password" required>
+      </div>
+      <div class="input-field">
+        <label for="newPassword" translate="pages.account.profile.update-password-form.new-password"></label>
+        <input autocomplete="new-password" formControlName="newPassword" id="newPassword" type="password" required>
+      </div>
+      <div class="input-field">
+        <label for="confirmNewPassword"
+          translate="pages.account.profile.update-password-form.confirm-new-password"></label>
+        <input autocomplete="new-password" formControlName="confirmNewPassword" id="confirmNewPassword" type="password"
+          required>
+      </div>
+      <div class="input-field">
+        <button color="primary" id="update-button" type="submit" [disabled]="updatePasswordForm.invalid">
+          <span translate="pages.account.profile.update-password-form.button"></span>
+        </button>
+      </div>
+    </form>
   </section>
 </div>

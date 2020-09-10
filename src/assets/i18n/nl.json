@@ -15,9 +15,28 @@
       "title": "Login",
       "form": {
         "username": "Gebruiker",
-        "password": "Password",
+        "password": "Wachtwoord",
         "button": "Inloggen"
       }
+    },
+    "account": {
+      "apps": {
+        "title": "Applicaties"
+      },
+      "profile": {
+        "title": "Profiel",
+        "update-password-form": {
+          "title": "Wachtwoord wijzigen",
+          "current-password": "Huidig wachtwoord",
+          "new-password": "Nieuw wachtwoord",
+          "confirm-new-password": "Nieuw wachtwoord bevestigen",
+          "button": "Wachtwoord wijzigen"
+        }
+      }
     }
+  },
+  "actions": {
+    "open": "Openen",
+    "start": "Starten"
   }
 }

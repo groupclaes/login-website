@@ -25,6 +25,14 @@ export class AuthService {
     return req;
   }
 
+  public getApplications() {
+    return this.http.get<any>(`https://auth.groupclaes.be/applications`);
+  }
+
+  public postUpdatedPassword(passwordForm: any) {
+    return this.http.post<any>(`https://auth.groupclaes.be/account/update-password`, passwordForm);
+  }
+
   public logout() {
     return this.http.get<any>(`https://auth.groupclaes.be/logout`).pipe(shareReplay());
   }
