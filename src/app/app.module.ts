@@ -16,6 +16,7 @@ import { AccountAppsComponent } from './pages/account/apps/apps.component';
 import { AccountSettingsComponent } from './pages/account/settings/settings.component';
 import { AccountProfileComponent } from './pages/account/profile/profile.component';
 import { AccountApplicationListComponent } from './core/components/account-application-list/account-application-list.component';
+import { AccountUpdatePasswordComponent } from './core/components/account-update-password/account-update-password.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccountAppsComponent,
     AccountSettingsComponent,
     AccountProfileComponent,
-    AccountApplicationListComponent
+    AccountApplicationListComponent,
+    AccountUpdatePasswordComponent
   ],
   imports: [
     BrowserModule,
