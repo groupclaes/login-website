@@ -3,6 +3,9 @@ import { FormGroup } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 
+import { default as nl } from '../assets/i18n/nl.json';
+import { default as fr } from '../assets/i18n/fr.json';
+
 @Component({
   selector: 'claes-root',
   templateUrl: './app.component.html',
@@ -13,8 +16,11 @@ export class AppComponent {
   verifyResponse: string;
 
   constructor(
-    private translate: TranslateService
+    translate: TranslateService
   ) {
+    translate.setTranslation('nl', nl);
+    translate.setTranslation('fr', fr);
+
     translate.setDefaultLang(environment.defaultLanguage);
     translate.addLangs(environment.supportedLanguages);
     const browserLang: string = translate.getBrowserLang();
