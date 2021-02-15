@@ -21,7 +21,7 @@ export class AuthService {
 
   public verify() {
     const req = this.http.get<any>(`https://auth.groupclaes.be/login`).pipe(shareReplay());
-    req.subscribe(() => this.authenticated = true, err => this.authenticated = false);
+    req.subscribe(() => this.authenticated = true, () => this.authenticated = false);
     return req;
   }
 
