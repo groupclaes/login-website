@@ -27,26 +27,16 @@ export class AppComponent {
       const myLang = window.localStorage.getItem('language');
 
       if (myLang) {
-        switch (myLang) {
-          case 'fr':
-            translate.use('fr');
-            break;
-
-          default:
-            // the lang to use, if the lang isn't available, it will use the current loader to get them
-            translate.use('nl');
-            break;
+        if (environment.supportedLanguages.indexOf(myLang) >= 0) {
+          translate.use(myLang)
+        } else {
+          translate.use(environment.defaultLanguage)
         }
       } else {
-        switch (browserLang) {
-          case 'fr':
-            translate.use('fr');
-            break;
-
-          default:
-            // the lang to use, if the lang isn't available, it will use the current loader to get them
-            translate.use('nl');
-            break;
+        if (environment.supportedLanguages.indexOf(browserLang) >= 0) {
+          translate.use(browserLang)
+        } else {
+          translate.use(environment.defaultLanguage)
         }
       }
     } else {
