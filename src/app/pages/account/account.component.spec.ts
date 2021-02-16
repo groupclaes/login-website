@@ -11,7 +11,9 @@ describe('AccountComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AccountComponent],
+      declarations: [
+        AccountComponent
+      ],
       imports: [
         TranslateModule.forRoot(),
         RouterTestingModule,

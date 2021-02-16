@@ -10,7 +10,9 @@ describe('SettingsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AccountSettingsComponent],
+      declarations: [
+        AccountSettingsComponent
+      ],
       imports: [
         CoreModule,
         RouterTestingModule
