@@ -1,27 +1,13 @@
-# LoginPortal
+# Groupclaes Company Login Portal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+This project was created as a onepage single login solution (like login.microsoft.com)
 
-## Development server
+## Integrated applications
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+At his time only 2 applications have been integrated, in te feature all management applications in-house managed will authenticate using this method
+  - EMP => [https://emp.groupclaes.be](https://emp.groupclaes.be)
+  - PCM => [https://pcm-ui.groupclaes.be](https://pcm-ui.groupclaes.be)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Users can change their password and view all their available applications, more features like permisison management, application management, ability to import avatar etc will be added in later versions when time is available.
