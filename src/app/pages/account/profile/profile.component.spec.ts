@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule } from '@ngx-translate/core';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { AccountProfileComponent } from './profile.component';
 
@@ -8,7 +11,12 @@ describe('ProfileComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AccountProfileComponent]
+      declarations: [AccountProfileComponent],
+      imports: [
+        TranslateModule.forRoot(),
+        RouterTestingModule,
+        CoreModule
+      ]
     })
       .compileComponents();
   }));

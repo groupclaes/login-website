@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { CoreModule } from 'src/app/core/core.module';
 
 import { AccountSettingsComponent } from './settings.component';
 
@@ -8,7 +10,11 @@ describe('SettingsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AccountSettingsComponent]
+      declarations: [AccountSettingsComponent],
+      imports: [
+        CoreModule,
+        RouterTestingModule
+      ]
     })
       .compileComponents();
   }));

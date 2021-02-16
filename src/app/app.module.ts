@@ -10,29 +10,25 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
 import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
-import { AccountMenuComponent } from './core/components/account-menu/account-menu.component';
 import { AccountAppsComponent } from './pages/account/apps/apps.component';
 import { AccountSettingsComponent } from './pages/account/settings/settings.component';
 import { AccountProfileComponent } from './pages/account/profile/profile.component';
-import { AccountApplicationListComponent } from './core/components/account-application-list/account-application-list.component';
-import { AccountUpdatePasswordComponent } from './core/components/account-update-password/account-update-password.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AccountComponent,
-    AccountMenuComponent,
     AccountAppsComponent,
     AccountSettingsComponent,
-    AccountProfileComponent,
-    AccountApplicationListComponent,
-    AccountUpdatePasswordComponent
+    AccountProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    CoreModule,
     TranslateModule.forRoot(),
     HttpClientModule,
     AppRoutingModule

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -12,7 +11,6 @@ import { default as fr } from '../assets/i18n/fr.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  loginForm: FormGroup;
   verifyResponse: string;
 
   constructor(
