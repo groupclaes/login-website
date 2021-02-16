@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -8,13 +8,15 @@ import { default as fr } from '../assets/i18n/fr.json';
 @Component({
   selector: 'claes-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   verifyResponse: string
 
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    private ref: ChangeDetectorRef
   ) {
     translate.setTranslation('nl', nl)
     translate.setTranslation('fr', fr)
@@ -28,6 +30,7 @@ export class AppComponent {
       this.updateLangIfSupported(myLang ? myLang : browserLang)
     } else {
       translate.use(environment.defaultLanguage)
+      this.ref.markForCheck()
     }
   }
 
@@ -37,5 +40,6 @@ export class AppComponent {
     } else {
       this.translate.use(environment.defaultLanguage)
     }
+    this.ref.markForCheck()
   }
 }
